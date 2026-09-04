@@ -1,0 +1,1340 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цех</dataPath>
+			<field>Цех</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказПоставщику</dataPath>
+			<field>ЗаказПоставщику</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Питч</dataPath>
+			<field>Питч</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Месяц</dataPath>
+			<field>Месяц</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=ММММ</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МаксимальнаяРазмерПитча</dataPath>
+			<field>МаксимальнаяРазмерПитча</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Максимальная размер питча</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаКалендаря</dataPath>
+			<field>ДатаКалендаря</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата календаря</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>План</dataPath>
+			<field>План</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РекомендуемыйРазмерПитчаНа5Дней</dataPath>
+			<field>РекомендуемыйРазмерПитчаНа5Дней</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рекомендуемый размер питча на 5 дней</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РабочихДнейВМесяце</dataPath>
+			<field>РабочихДнейВМесяце</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рабочих дней в месяце</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗагрузкаПитча</dataPath>
+			<field>ЗагрузкаПитча</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка питча</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуемыйДозагрузПитча</dataPath>
+			<field>ТребуемыйДозагрузПитча</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуемый дозагруз питча</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НДСПитча</dataPath>
+			<field>НДСПитча</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДСПитча</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтавкаНДС</dataPath>
+			<field>СтавкаНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗагрузкаПитчаТЗ</dataPath>
+			<field>ЗагрузкаПитчаТЗ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка питча ТЗ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланТЗ</dataPath>
+			<field>ПланТЗ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План ТЗ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НДСПитчаТЗ</dataPath>
+			<field>НДСПитчаТЗ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДСПитча ТЗ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	КалендарныеГрафики.ДатаГрафика КАК ДатаГрафика,
+	ДЕНЬНЕДЕЛИ(КалендарныеГрафики.ДатаГрафика) КАК ДеньНедели,
+	КалендарныеГрафики.Год КАК Год,
+	ВЫБОР
+		КОГДА КалендарныеГрафики.ДеньВключенВГрафик = ИСТИНА
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК Пятнидневка
+ПОМЕСТИТЬ ВТ
+ИЗ
+	РегистрСведений.КалендарныеГрафики КАК КалендарныеГрафики,
+	Константа.СМ_ДатаИзмененияФормированияПитчей КАК СМ_ДатаИзмененияФормированияПитчей
+ГДЕ
+	ВЫБОР
+			КОГДА РАЗНОСТЬДАТ(КалендарныеГрафики.ДатаГрафика, СМ_ДатаИзмененияФормированияПитчей.Значение, ДЕНЬ) &lt; 0
+				ТОГДА КалендарныеГрафики.ДатаГрафика МЕЖДУ ДОБАВИТЬКДАТЕ(НАЧАЛОПЕРИОДА(&amp;ДатаНачала, НЕДЕЛЯ), ДЕНЬ, 3) И ДОБАВИТЬКДАТЕ(НАЧАЛОПЕРИОДА(&amp;ДатаОкончания, НЕДЕЛЯ), ДЕНЬ, 2)
+			ИНАЧЕ КалендарныеГрафики.ДатаГрафика МЕЖДУ НАЧАЛОПЕРИОДА(&amp;ДатаНачала, НЕДЕЛЯ) И КОНЕЦПЕРИОДА(&amp;ДатаОкончания, НЕДЕЛЯ)
+		КОНЕЦ
+
+ИНДЕКСИРОВАТЬ ПО
+	Год,
+	ДатаГрафика
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	НАЧАЛОПЕРИОДА(ВТ.ДатаГрафика, НЕДЕЛЯ) КАК ДатаКалендаря,
+	СУММА(ВТ.Пятнидневка) КАК Пятнидневка
+ПОМЕСТИТЬ КоличествоРабочихДнейВНеделе
+ИЗ
+	ВТ КАК ВТ
+
+СГРУППИРОВАТЬ ПО
+	НАЧАЛОПЕРИОДА(ВТ.ДатаГрафика, НЕДЕЛЯ)
+
+ИНДЕКСИРОВАТЬ ПО
+	ДатаКалендаря
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	НАЧАЛОПЕРИОДА(ВТ.ДатаГрафика, МЕСЯЦ) КАК ДатаКалендаря,
+	СУММА(ВТ.Пятнидневка) КАК Пятнидневка
+ПОМЕСТИТЬ КоличествоРабочихДнейВМесяце
+ИЗ
+	ВТ КАК ВТ
+ГДЕ
+	ВТ.ДатаГрафика МЕЖДУ НАЧАЛОПЕРИОДА(&amp;ДатаНачала, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;ДатаОкончания, МЕСЯЦ)
+
+СГРУППИРОВАТЬ ПО
+	НАЧАЛОПЕРИОДА(ВТ.ДатаГрафика, МЕСЯЦ)
+
+ИНДЕКСИРОВАТЬ ПО
+	ДатаКалендаря
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ.Год КАК Год,
+	ВТ.ДатаГрафика КАК ДатаКалендаря,
+	ВТ.ДеньНедели КАК ДеньНедели,
+	СУММА(ВТ1.Пятнидневка) КАК РабочийДеньНедели,
+	КоличествоРабочихДнейВНеделе.Пятнидневка КАК РабочихВНеделю
+ПОМЕСТИТЬ РабочиеДни
+ИЗ
+	ВТ КАК ВТ
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ КАК ВТ1
+		ПО ВТ.Год = ВТ1.Год
+			И ВТ.ДатаГрафика &lt;= ВТ1.ДатаГрафика
+			И (ВТ1.ДатаГрафика &lt;= КОНЕЦПЕРИОДА(ВТ.ДатаГрафика, НЕДЕЛЯ))
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ КоличествоРабочихДнейВНеделе КАК КоличествоРабочихДнейВНеделе
+		ПО ВТ.ДатаГрафика &gt;= КоличествоРабочихДнейВНеделе.ДатаКалендаря
+			И (КоличествоРабочихДнейВНеделе.ДатаКалендаря &gt;= НАЧАЛОПЕРИОДА(ВТ.ДатаГрафика, НЕДЕЛЯ))
+
+СГРУППИРОВАТЬ ПО
+	ВТ.ДатаГрафика,
+	ВТ.Год,
+	ВТ.ДеньНедели,
+	КоличествоРабочихДнейВНеделе.Пятнидневка
+
+ИНДЕКСИРОВАТЬ ПО
+	ДатаКалендаря
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВЫБОР
+		КОГДА РабочиеДни.ДатаКалендаря &lt; СМ_ДатаИзмененияФормированияПитчей.Значение
+			ТОГДА НАЧАЛОПЕРИОДА(РабочиеДни.ДатаКалендаря, НЕДЕЛЯ)
+		ИНАЧЕ ДОБАВИТЬКДАТЕ(НАЧАЛОПЕРИОДА(РабочиеДни.ДатаКалендаря, НЕДЕЛЯ), ДЕНЬ, 3)
+	КОНЕЦ КАК Питч,
+	ВЫБОР
+		КОГДА РабочиеДни.ДатаКалендаря &lt; СМ_ДатаИзмененияФормированияПитчей.Значение
+			ТОГДА НАЧАЛОПЕРИОДА(РабочиеДни.ДатаКалендаря, НЕДЕЛЯ)
+		ИНАЧЕ ДОБАВИТЬКДАТЕ(НАЧАЛОПЕРИОДА(РабочиеДни.ДатаКалендаря, НЕДЕЛЯ), ДЕНЬ, 3)
+	КОНЕЦ КАК ДатаКалендаря,
+	РабочиеДни.ДеньНедели КАК ДеньНедели,
+	РабочиеДни.РабочийДеньНедели КАК РабочийДеньНедели,
+	РабочиеДни.РабочихВНеделю КАК РабочихВНеделю,
+	ВЫБОР
+		КОГДА РабочиеДни.РабочихВНеделю &lt;&gt; 0
+			ТОГДА РабочиеДни.РабочийДеньНедели / РабочиеДни.РабочихВНеделю
+		ИНАЧЕ 0
+	КОНЕЦ КАК Коэффициент
+ПОМЕСТИТЬ КалендарьРабочихДнейМесяцы
+ИЗ
+	РабочиеДни КАК РабочиеДни,
+	Константа.СМ_ДатаИзмененияФормированияПитчей КАК СМ_ДатаИзмененияФормированияПитчей
+ГДЕ
+	РабочиеДни.ДатаКалендаря = НАЧАЛОПЕРИОДА(РабочиеДни.ДатаКалендаря, МЕСЯЦ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВЫБОР
+		КОГДА РабочиеДни.ДатаКалендаря &lt; СМ_ДатаИзмененияФормированияПитчей.Значение
+			ТОГДА НАЧАЛОПЕРИОДА(РабочиеДни.ДатаКалендаря, НЕДЕЛЯ)
+		ИНАЧЕ ДОБАВИТЬКДАТЕ(НАЧАЛОПЕРИОДА(РабочиеДни.ДатаКалендаря, НЕДЕЛЯ), ДЕНЬ, 3)
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА РабочиеДни.ДатаКалендаря &lt; СМ_ДатаИзмененияФормированияПитчей.Значение
+			ТОГДА НАЧАЛОПЕРИОДА(РабочиеДни.ДатаКалендаря, НЕДЕЛЯ)
+		ИНАЧЕ ДОБАВИТЬКДАТЕ(НАЧАЛОПЕРИОДА(РабочиеДни.ДатаКалендаря, НЕДЕЛЯ), ДЕНЬ, 3)
+	КОНЕЦ,
+	РабочиеДни.ДеньНедели,
+	РабочиеДни.РабочийДеньНедели,
+	РабочиеДни.РабочихВНеделю,
+	ВЫБОР
+		КОГДА РабочиеДни.РабочихВНеделю &lt;&gt; 0
+			ТОГДА РабочиеДни.РабочийДеньНедели / РабочиеДни.РабочихВНеделю
+		ИНАЧЕ 0
+	КОНЕЦ
+ИЗ
+	РабочиеДни КАК РабочиеДни,
+	Константа.СМ_ДатаИзмененияФормированияПитчей КАК СМ_ДатаИзмененияФормированияПитчей
+ГДЕ
+	РабочиеДни.ДатаКалендаря = НАЧАЛОПЕРИОДА(РабочиеДни.ДатаКалендаря, НЕДЕЛЯ)
+	И РабочиеДни.ДатаКалендаря &lt;&gt; НАЧАЛОПЕРИОДА(РабочиеДни.ДатаКалендаря, МЕСЯЦ)
+	И РабочиеДни.ДатаКалендаря &lt;&gt; НАЧАЛОПЕРИОДА(КОНЕЦПЕРИОДА(РабочиеДни.ДатаКалендаря, МЕСЯЦ), ДЕНЬ)
+	И РабочиеДни.ДатаКалендаря &lt;&gt; НАЧАЛОПЕРИОДА(КОНЕЦПЕРИОДА(РабочиеДни.ДатаКалендаря, МЕСЯЦ), НЕДЕЛЯ)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВЫБОР
+		КОГДА РабочиеДни.ДатаКалендаря &lt; СМ_ДатаИзмененияФормированияПитчей.Значение
+			ТОГДА НАЧАЛОПЕРИОДА(РабочиеДни.ДатаКалендаря, НЕДЕЛЯ)
+		ИНАЧЕ ДОБАВИТЬКДАТЕ(НАЧАЛОПЕРИОДА(РабочиеДни.ДатаКалендаря, НЕДЕЛЯ), ДЕНЬ, 3)
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА РабочиеДни.ДатаКалендаря &lt; СМ_ДатаИзмененияФормированияПитчей.Значение
+			ТОГДА НАЧАЛОПЕРИОДА(РабочиеДни.ДатаКалендаря, НЕДЕЛЯ)
+		ИНАЧЕ ДОБАВИТЬКДАТЕ(НАЧАЛОПЕРИОДА(РабочиеДни.ДатаКалендаря, НЕДЕЛЯ), ДЕНЬ, 3)
+	КОНЕЦ,
+	РабочиеДни.ДеньНедели,
+	РабочиеДни.РабочийДеньНедели,
+	РабочиеДни.РабочихВНеделю,
+	ВЫБОР
+		КОГДА РабочиеДни.РабочихВНеделю &lt;&gt; 0
+			ТОГДА ВЫБОР
+					КОГДА РабочиеДни.РабочийДеньНедели &lt;&gt; 0
+						ТОГДА (РабочиеДни.РабочихВНеделю - РабочиеДни.РабочийДеньНедели + 1) / РабочиеДни.РабочихВНеделю
+					ИНАЧЕ 1
+				КОНЕЦ
+		ИНАЧЕ 0
+	КОНЕЦ
+ИЗ
+	РабочиеДни КАК РабочиеДни,
+	Константа.СМ_ДатаИзмененияФормированияПитчей КАК СМ_ДатаИзмененияФормированияПитчей
+ГДЕ
+	РабочиеДни.ДатаКалендаря = НАЧАЛОПЕРИОДА(КОНЕЦПЕРИОДА(РабочиеДни.ДатаКалендаря, МЕСЯЦ), ДЕНЬ)
+
+ИНДЕКСИРОВАТЬ ПО
+	ДатаКалендаря
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.Питч КАК Питч,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.ЗаказПоставщику.Цех КАК Цех,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.КоличествоПриход КАК КоличествоПриход,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.СуммаВзаиморасчетовПриход КАК СуммаВзаиморасчетовПриход,
+	ЕСТЬNULL(СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.СуммаНДСПриход, 0) КАК НДСПриход
+ПОМЕСТИТЬ ЗаказыПоставщикам
+ИЗ
+	РегистрНакопления.СМ_ВзаиморасчетыПоЗаказамПоставщикам.Обороты(
+			,
+			,
+			Регистратор,
+			Питч.Дата МЕЖДУ НАЧАЛОПЕРИОДА(&amp;ДатаНачала, НЕДЕЛЯ) И &amp;ДатаОкончания
+				И НЕ ЗаказПоставщику.Цех.ПометкаУдаления
+				И Номенклатура.КатегорияНоменклатуры.Код &lt;&gt; "УТ0000007") КАК СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты
+
+ИНДЕКСИРОВАТЬ ПО
+	Питч
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.Питч КАК Питч,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.ЗаказПоставщику.Цех КАК Цех,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.КоличествоПриход КАК КоличествоПриход,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.СуммаВзаиморасчетовПриход КАК СуммаВзаиморасчетовПриход,
+	ЕСТЬNULL(СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.СуммаНДСПриход, 0) КАК НДСПриход
+ПОМЕСТИТЬ ЗаказыПоставщикамТЗ
+ИЗ
+	РегистрНакопления.СМ_ВзаиморасчетыПоЗаказамПоставщикам.Обороты(
+			,
+			,
+			Регистратор,
+			Питч.Дата МЕЖДУ НАЧАЛОПЕРИОДА(&amp;ДатаНачала, НЕДЕЛЯ) И &amp;ДатаОкончания
+				И НЕ ЗаказПоставщику.Цех.ПометкаУдаления
+				И Номенклатура.КатегорияНоменклатуры.Код = "УТ0000007") КАК СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты
+
+ИНДЕКСИРОВАТЬ ПО
+	Питч
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЗаказыПоставщикам.Питч КАК Питч,
+	ЗаказыПоставщикам.Цех КАК Цех,
+	СУММА(ЗаказыПоставщикам.КоличествоПриход) КАК Количество,
+	СУММА(ЗаказыПоставщикам.СуммаВзаиморасчетовПриход) КАК Сумма,
+	СУММА(ЗаказыПоставщикам.НДСПриход) КАК НДС
+ПОМЕСТИТЬ ЗагрузкаПитчей
+ИЗ
+	ЗаказыПоставщикам КАК ЗаказыПоставщикам
+
+СГРУППИРОВАТЬ ПО
+	ЗаказыПоставщикам.Питч,
+	ЗаказыПоставщикам.Цех
+
+ИНДЕКСИРОВАТЬ ПО
+	Питч
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЗаказыПоставщикамТЗ.Питч КАК Питч,
+	ЗаказыПоставщикамТЗ.Цех КАК Цех,
+	СУММА(ЗаказыПоставщикамТЗ.КоличествоПриход) КАК Количество,
+	СУММА(ЗаказыПоставщикамТЗ.СуммаВзаиморасчетовПриход) КАК Сумма,
+	СУММА(ЗаказыПоставщикамТЗ.НДСПриход) КАК НДС
+ПОМЕСТИТЬ ЗагрузкаПитчейТЗ
+ИЗ
+	ЗаказыПоставщикамТЗ КАК ЗаказыПоставщикамТЗ
+
+СГРУППИРОВАТЬ ПО
+	ЗаказыПоставщикамТЗ.Питч,
+	ЗаказыПоставщикамТЗ.Цех
+
+ИНДЕКСИРОВАТЬ ПО
+	Питч
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ.ДатаГрафика КАК Дата
+ПОМЕСТИТЬ ТабПитчи
+ИЗ
+	ВТ КАК ВТ,
+	Константа.СМ_ДатаИзмененияФормированияПитчей КАК СМ_ДатаИзмененияФормированияПитчей
+ГДЕ
+	ВЫБОР
+			КОГДА ВТ.ДатаГрафика &lt; СМ_ДатаИзмененияФормированияПитчей.Значение
+				ТОГДА ВТ.ДеньНедели = 1
+			ИНАЧЕ ВТ.ДеньНедели = 4
+		КОНЕЦ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СМ_РазмерПитча.Цех КАК Цех,
+	СМ_РазмерПитча.Сумма КАК МаксимальныйПитч,
+	ВложенныйЗапрос.Дата КАК Питч,
+	СМ_Питчи.Родитель.Наименование КАК Родитель,
+	СМ_Питчи.Родитель.Родитель.Наименование КАК РодительРодитель,
+	СМ_Питчи.Родитель.Значение КАК РодительЗначение,
+	СМ_Питчи.Родитель.Родитель.Значение КАК РодительРодительЗначение
+ПОМЕСТИТЬ РазмерыПитчей
+ИЗ
+	(ВЫБРАТЬ
+		МАКСИМУМ(СМ_РазмерПитча.Питч.Дата) КАК Период,
+		СМ_РазмерПитча.Цех КАК Цех,
+		ТабПитчи.Дата КАК Дата
+	ИЗ
+		ТабПитчи КАК ТабПитчи
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СМ_РазмерПитча КАК СМ_РазмерПитча
+			ПО ТабПитчи.Дата &gt;= СМ_РазмерПитча.Питч.Дата
+	ГДЕ
+		НЕ СМ_РазмерПитча.Цех.ПометкаУдаления
+	
+	СГРУППИРОВАТЬ ПО
+		СМ_РазмерПитча.Цех,
+		ТабПитчи.Дата) КАК ВложенныйЗапрос
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СМ_РазмерПитча КАК СМ_РазмерПитча
+		ПО ВложенныйЗапрос.Период = СМ_РазмерПитча.Питч.Дата
+			И ВложенныйЗапрос.Цех = СМ_РазмерПитча.Цех
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.СМ_Питчи КАК СМ_Питчи
+		ПО ВложенныйЗапрос.Дата = СМ_Питчи.Дата
+ГДЕ
+	НЕ СМ_РазмерПитча.Цех.ПометкаУдаления
+	И СМ_РазмерПитча.Регистратор.Месяц МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЗагрузкаПитчей.Питч.Дата КАК Питч,
+	КалендарьРабочихДнейМесяцы.ДатаКалендаря КАК ДатаКалендаря,
+	ЗагрузкаПитчей.Цех КАК Цех,
+	ВЫРАЗИТЬ(ЗагрузкаПитчей.Сумма * КалендарьРабочихДнейМесяцы.Коэффициент КАК ЧИСЛО(15, 2)) КАК ЗагрузкаПитча,
+	0 КАК МаксимальнаяРазмерПитча,
+	КалендарьРабочихДнейМесяцы.Коэффициент КАК Коэффициент,
+	ВЫРАЗИТЬ(ЗагрузкаПитчей.НДС * КалендарьРабочихДнейМесяцы.Коэффициент КАК ЧИСЛО(15, 2)) КАК НДСПитча,
+	ПОДСТРОКА(ЗагрузкаПитчей.Питч.Родитель.Наименование, 0, 50) КАК Родитель,
+	ПОДСТРОКА(ЗагрузкаПитчей.Питч.Родитель.Родитель.Наименование, 0, 50) КАК РодительРодитель,
+	ЗагрузкаПитчей.Питч.Родитель.Значение КАК ПитчРодительЗначение,
+	ЗагрузкаПитчей.Питч.Родитель.Родитель.Значение КАК ПитчРодительРодительЗначение
+ПОМЕСТИТЬ ПитчиЗагрузкаСРазмерами
+ИЗ
+	ЗагрузкаПитчей КАК ЗагрузкаПитчей
+		ЛЕВОЕ СОЕДИНЕНИЕ КалендарьРабочихДнейМесяцы КАК КалендарьРабочихДнейМесяцы
+		ПО ЗагрузкаПитчей.Питч.Дата = КалендарьРабочихДнейМесяцы.Питч
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	РазмерыПитчей.Питч,
+	КалендарьРабочихДнейМесяцы.ДатаКалендаря,
+	РазмерыПитчей.Цех,
+	0,
+	ВЫРАЗИТЬ(РазмерыПитчей.МаксимальныйПитч * КалендарьРабочихДнейМесяцы.Коэффициент КАК ЧИСЛО(15, 2)),
+	КалендарьРабочихДнейМесяцы.Коэффициент,
+	0,
+	РазмерыПитчей.Родитель,
+	РазмерыПитчей.РодительРодитель,
+	РазмерыПитчей.РодительЗначение,
+	РазмерыПитчей.РодительРодительЗначение
+ИЗ
+	РазмерыПитчей КАК РазмерыПитчей
+		ЛЕВОЕ СОЕДИНЕНИЕ КалендарьРабочихДнейМесяцы КАК КалендарьРабочихДнейМесяцы
+		ПО РазмерыПитчей.Питч = КалендарьРабочихДнейМесяцы.Питч
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЗагрузкаПитчейТЗ.Питч.Дата КАК Питч,
+	КалендарьРабочихДнейМесяцы.ДатаКалендаря КАК ДатаКалендаря,
+	ЗагрузкаПитчейТЗ.Цех КАК Цех,
+	ВЫРАЗИТЬ(ЗагрузкаПитчейТЗ.Сумма * КалендарьРабочихДнейМесяцы.Коэффициент КАК ЧИСЛО(15, 2)) КАК ЗагрузкаПитча,
+	0 КАК МаксимальнаяРазмерПитча,
+	КалендарьРабочихДнейМесяцы.Коэффициент КАК Коэффициент,
+	ВЫРАЗИТЬ(ЗагрузкаПитчейТЗ.НДС * КалендарьРабочихДнейМесяцы.Коэффициент КАК ЧИСЛО(15, 2)) КАК НДСПитча
+ПОМЕСТИТЬ ПитчиЗагрузкаСРазмерамиТЗ
+ИЗ
+	ЗагрузкаПитчейТЗ КАК ЗагрузкаПитчейТЗ
+		ЛЕВОЕ СОЕДИНЕНИЕ КалендарьРабочихДнейМесяцы КАК КалендарьРабочихДнейМесяцы
+		ПО ЗагрузкаПитчейТЗ.Питч.Дата = КалендарьРабочихДнейМесяцы.Питч
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	РазмерыПитчей.Питч,
+	КалендарьРабочихДнейМесяцы.ДатаКалендаря,
+	РазмерыПитчей.Цех,
+	0,
+	ВЫРАЗИТЬ(РазмерыПитчей.МаксимальныйПитч * КалендарьРабочихДнейМесяцы.Коэффициент КАК ЧИСЛО(15, 2)),
+	КалендарьРабочихДнейМесяцы.Коэффициент,
+	0
+ИЗ
+	РазмерыПитчей КАК РазмерыПитчей
+		ЛЕВОЕ СОЕДИНЕНИЕ КалендарьРабочихДнейМесяцы КАК КалендарьРабочихДнейМесяцы
+		ПО РазмерыПитчей.Питч = КалендарьРабочихДнейМесяцы.Питч
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПитчиЗагрузкаСРазмерами.Питч КАК Питч,
+	ПитчиЗагрузкаСРазмерами.ДатаКалендаря КАК ДатаКалендаря,
+	ПитчиЗагрузкаСРазмерами.Цех КАК Цех,
+	СУММА(ПитчиЗагрузкаСРазмерами.ЗагрузкаПитча) КАК ЗагрузкаПитча,
+	СУММА(ПитчиЗагрузкаСРазмерами.МаксимальнаяРазмерПитча) КАК МаксимальнаяРазмерПитча,
+	СУММА(ПитчиЗагрузкаСРазмерами.НДСПитча) КАК НДСПитча,
+	ДОБАВИТЬКДАТЕ(ДОБАВИТЬКДАТЕ(ДАТАВРЕМЯ(1, 1, 1), ГОД, ПитчиЗагрузкаСРазмерами.ПитчРодительРодительЗначение - 1), МЕСЯЦ, ПитчиЗагрузкаСРазмерами.ПитчРодительЗначение - 1) КАК Родитель
+ПОМЕСТИТЬ ПитчиЗагрузкаСРазмерамиГруппировка4
+ИЗ
+	ПитчиЗагрузкаСРазмерами КАК ПитчиЗагрузкаСРазмерами
+ГДЕ
+	ПитчиЗагрузкаСРазмерами.ДатаКалендаря МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+СГРУППИРОВАТЬ ПО
+	ПитчиЗагрузкаСРазмерами.Питч,
+	ПитчиЗагрузкаСРазмерами.Цех,
+	ПитчиЗагрузкаСРазмерами.ДатаКалендаря,
+	ДОБАВИТЬКДАТЕ(ДОБАВИТЬКДАТЕ(ДАТАВРЕМЯ(1, 1, 1), ГОД, ПитчиЗагрузкаСРазмерами.ПитчРодительРодительЗначение - 1), МЕСЯЦ, ПитчиЗагрузкаСРазмерами.ПитчРодительЗначение - 1)
+
+ИМЕЮЩИЕ
+	(СУММА(ПитчиЗагрузкаСРазмерами.ЗагрузкаПитча) &lt;&gt; 0
+		ИЛИ СУММА(ПитчиЗагрузкаСРазмерами.МаксимальнаяРазмерПитча) &lt;&gt; 0)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПитчиЗагрузкаСРазмерамиТЗ.Питч КАК Питч,
+	ПитчиЗагрузкаСРазмерамиТЗ.ДатаКалендаря КАК ДатаКалендаря,
+	ПитчиЗагрузкаСРазмерамиТЗ.Цех КАК Цех,
+	СУММА(ПитчиЗагрузкаСРазмерамиТЗ.ЗагрузкаПитча) КАК ЗагрузкаПитча,
+	СУММА(ПитчиЗагрузкаСРазмерамиТЗ.МаксимальнаяРазмерПитча) КАК МаксимальнаяРазмерПитча,
+	СУММА(ПитчиЗагрузкаСРазмерамиТЗ.НДСПитча) КАК НДСПитча
+ПОМЕСТИТЬ ПитчиЗагрузкаСРазмерамиГруппировкаТЗ
+ИЗ
+	ПитчиЗагрузкаСРазмерамиТЗ КАК ПитчиЗагрузкаСРазмерамиТЗ
+ГДЕ
+	ПитчиЗагрузкаСРазмерамиТЗ.ДатаКалендаря МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+СГРУППИРОВАТЬ ПО
+	ПитчиЗагрузкаСРазмерамиТЗ.Питч,
+	ПитчиЗагрузкаСРазмерамиТЗ.Цех,
+	ПитчиЗагрузкаСРазмерамиТЗ.ДатаКалендаря
+
+ИМЕЮЩИЕ
+	СУММА(ПитчиЗагрузкаСРазмерамиТЗ.ЗагрузкаПитча) &lt;&gt; 0
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЕСТЬNULL(ПитчиЗагрузкаСРазмерамиГруппировка.Родитель, СМ_ПланыЗагрузкиЦеховОбороты.Месяц) КАК Месяц,
+	ЕСТЬNULL(ПитчиЗагрузкаСРазмерамиГруппировка.Цех, СМ_ПланыЗагрузкиЦеховОбороты.Цех) КАК Цех,
+	ЕСТЬNULL(СМ_ПланыЗагрузкиЦеховОбороты.СуммаОборот, 0) КАК План,
+	ВЫБОР
+		КОГДА КоличествоРабочихДнейВМесяце.Пятнидневка &lt;&gt; 0
+				И НЕ СМ_ПланыЗагрузкиЦеховОбороты.СуммаОборот ЕСТЬ NULL
+			ТОГДА ВЫРАЗИТЬ(СМ_ПланыЗагрузкиЦеховОбороты.СуммаОборот * 5 / КоличествоРабочихДнейВМесяце.Пятнидневка КАК ЧИСЛО(15, 2))
+		ИНАЧЕ 0
+	КОНЕЦ КАК РекомендуемыйРазмерПитчаНа5Дней,
+	КоличествоРабочихДнейВМесяце.Пятнидневка КАК РабочихДнейВМесяце,
+	ЕСТЬNULL(ПитчиЗагрузкаСРазмерамиГруппировка.Питч, ДАТАВРЕМЯ(1, 1, 1)) КАК Питч,
+	ЕСТЬNULL(ПитчиЗагрузкаСРазмерамиГруппировка.ЗагрузкаПитча, 0) КАК ЗагрузкаПитча,
+	ЕСТЬNULL(ПитчиЗагрузкаСРазмерамиГруппировка.МаксимальнаяРазмерПитча, 0) КАК МаксимальнаяРазмерПитча,
+	ЕСТЬNULL(ПитчиЗагрузкаСРазмерамиГруппировка.ДатаКалендаря, ДАТАВРЕМЯ(1, 1, 1)) КАК ДатаКалендаря,
+	ЕСТЬNULL(ПитчиЗагрузкаСРазмерамиГруппировка.МаксимальнаяРазмерПитча, 0) - (ЕСТЬNULL(ПитчиЗагрузкаСРазмерамиГруппировка.ЗагрузкаПитча, 0) + ЕСТЬNULL(ПитчиЗагрузкаСРазмерамиГруппировкаТЗ.ЗагрузкаПитча, 0)) КАК ТребуемыйДозагрузПитча,
+	ЕСТЬNULL(ПитчиЗагрузкаСРазмерамиГруппировка.НДСПитча, 0) КАК НДСПитча,
+	ЕСТЬNULL(СМ_ПланыЗагрузкиЦеховОбороты.СуммаТЗОборот, 0) КАК ПланТЗ,
+	ЕСТЬNULL(ПитчиЗагрузкаСРазмерамиГруппировкаТЗ.ЗагрузкаПитча, 0) КАК ЗагрузкаПитчаТЗ,
+	ЕСТЬNULL(ПитчиЗагрузкаСРазмерамиГруппировкаТЗ.НДСПитча, 0) КАК НДСПитчаТЗ
+ИЗ
+	ПитчиЗагрузкаСРазмерамиГруппировка4 КАК ПитчиЗагрузкаСРазмерамиГруппировка
+		ПОЛНОЕ СОЕДИНЕНИЕ РегистрНакопления.СМ_ПланыЗагрузкиЦехов.Обороты(, , , Месяц МЕЖДУ НАЧАЛОПЕРИОДА(&amp;ДатаНачала, МЕСЯЦ) И КОНЕЦПЕРИОДА(&amp;ДатаОкончания, МЕСЯЦ)) КАК СМ_ПланыЗагрузкиЦеховОбороты
+			ЛЕВОЕ СОЕДИНЕНИЕ КоличествоРабочихДнейВМесяце КАК КоличествоРабочихДнейВМесяце
+			ПО СМ_ПланыЗагрузкиЦеховОбороты.Месяц = КоличествоРабочихДнейВМесяце.ДатаКалендаря
+		ПО (НАЧАЛОПЕРИОДА(ПитчиЗагрузкаСРазмерамиГруппировка.Родитель, МЕСЯЦ) = СМ_ПланыЗагрузкиЦеховОбороты.Месяц)
+			И ПитчиЗагрузкаСРазмерамиГруппировка.Цех = СМ_ПланыЗагрузкиЦеховОбороты.Цех
+		ПОЛНОЕ СОЕДИНЕНИЕ ПитчиЗагрузкаСРазмерамиГруппировкаТЗ КАК ПитчиЗагрузкаСРазмерамиГруппировкаТЗ
+		ПО ПитчиЗагрузкаСРазмерамиГруппировка.Питч = ПитчиЗагрузкаСРазмерамиГруппировкаТЗ.Питч
+			И ПитчиЗагрузкаСРазмерамиГруппировка.Цех = ПитчиЗагрузкаСРазмерамиГруппировкаТЗ.Цех
+			И ПитчиЗагрузкаСРазмерамиГруппировка.ДатаКалендаря = ПитчиЗагрузкаСРазмерамиГруппировкаТЗ.ДатаКалендаря
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;ПустойСписок
+				ТОГДА ИСТИНА
+			ИНАЧЕ ЕСТЬNULL(ПитчиЗагрузкаСРазмерамиГруппировка.Цех, СМ_ПланыЗагрузкиЦеховОбороты.Цех) В (&amp;Цех)
+		КОНЕЦ</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>СуммаЗагрузки</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сумма загрузки</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ПроцентЗагрузки</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Процент загрузки</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ТребуемыйДозагрузПлана</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Требуемый дозагруз плана</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>НДСЗагрузки</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>НДСЗагрузки</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ПроцентЗагрузкиТЗ</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Процент загрузки ТЗ</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>СуммаЗагрузкиТЗ</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сумма загрузки ТЗ</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>НДСЗагрузкиТЗ</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>НДСЗагрузки ТЗ</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ТребуемыйДозагрузПланаТЗ</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Требуемый дозагруз плана ТЗ</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ОбщийПлан</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Общий план</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ОбщийПроцентЗагрузки</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Общий процент загрузки</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ОбщийСуммаЗагрузки</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Общий сумма загрузки</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>СуммаЗагрузки</dataPath>
+		<expression>ВычислитьВыражение("Сумма(ЗагрузкаПитча)")</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроцентЗагрузки</dataPath>
+		<expression>ВЫБОР 
+	КОГДА Сумма(ВычислитьВыражениеСГруппировкойМассив("Максимум(План)", "Цех")) &lt;&gt; 0 
+		ТОГДА 100*Сумма(ЗагрузкаПитча)/Сумма(ВычислитьВыражениеСГруппировкойМассив("Максимум(План)", "Цех"))
+		ИНАЧЕ 0
+КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ТребуемыйДозагрузПлана</dataPath>
+		<expression>Сумма(ВычислитьВыражениеСГруппировкойМассив("Максимум(План)", "Цех")) - ВычислитьВыражение("Сумма(ЗагрузкаПитча)")</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НДСЗагрузки</dataPath>
+		<expression>ВычислитьВыражение("Сумма(НДСПитча)")</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаЗагрузкиТЗ</dataPath>
+		<expression>ВычислитьВыражение("Сумма(ЗагрузкаПитчаТЗ)")</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НДСЗагрузкиТЗ</dataPath>
+		<expression>ВычислитьВыражение("Сумма(НДСПитчаТЗ)")</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ТребуемыйДозагрузПланаТЗ</dataPath>
+		<expression>Сумма(ВычислитьВыражениеСГруппировкойМассив("Максимум(ПланТЗ)", "Цех")) - ВычислитьВыражение("Сумма(ЗагрузкаПитчаТЗ)")</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОбщийПлан</dataPath>
+		<expression>Сумма(ВычислитьВыражениеСГруппировкойМассив("Максимум(План)", "Цех")) + Сумма(ВычислитьВыражениеСГруппировкойМассив("Максимум(ПланТЗ)", "Цех"))</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОбщийПроцентЗагрузки</dataPath>
+		<expression>Выбор Когда  (Сумма(ВычислитьВыражениеСГруппировкойМассив("Максимум(План)", "Цех")) + Сумма(ВычислитьВыражениеСГруппировкойМассив("Максимум(ПланТЗ)", "Цех"))) &lt;&gt; 0 Тогда (ВычислитьВыражение("Сумма(ЗагрузкаПитча)")  + ВычислитьВыражение("Сумма(ЗагрузкаПитчаТЗ)") ) /(Сумма(ВычислитьВыражениеСГруппировкойМассив("Максимум(План)", "Цех")) + Сумма(ВычислитьВыражениеСГруппировкойМассив("Максимум(ПланТЗ)", "Цех")))*100 Иначе 0 Конец</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОбщийСуммаЗагрузки</dataPath>
+		<expression>ВычислитьВыражение("Сумма(ЗагрузкаПитча)")  + ВычислитьВыражение("Сумма(ЗагрузкаПитчаТЗ)") </expression>
+	</totalField>
+	<totalField>
+		<dataPath>План</dataPath>
+		<expression>Сумма(ВычислитьВыражениеСГруппировкойМассив("Максимум(План)", "Цех"))</expression>
+	</totalField>
+	<totalField>
+		<dataPath>МаксимальнаяРазмерПитча</dataPath>
+		<expression>Сумма(МаксимальнаяРазмерПитча)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РекомендуемыйРазмерПитчаНа5Дней</dataPath>
+		<expression>Сумма(РекомендуемыйРазмерПитчаНа5Дней)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗагрузкаПитча</dataPath>
+		<expression>Сумма(ЗагрузкаПитча + ЗагрузкаПитчаТЗ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ТребуемыйДозагрузПитча</dataPath>
+		<expression>Сумма(ТребуемыйДозагрузПитча)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НДСПитча</dataPath>
+		<expression>Сумма(НДСПитча) + Сумма(НДСПитчаТЗ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланТЗ</dataPath>
+		<expression>Сумма(ВычислитьВыражениеСГруппировкойМассив("Максимум(ПланТЗ)", "Цех"))</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроцентЗагрузкиТЗ</dataPath>
+		<expression>ВЫБОР 
+    КОГДА Сумма(ВычислитьВыражениеСГруппировкойМассив("Максимум(ПланТЗ)", "Цех")) &lt;&gt; 0 
+        ТОГДА 100*Сумма(ЗагрузкаПитчаТЗ)/Сумма(ВычислитьВыражениеСГруппировкойМассив("Максимум(ПланТЗ)", "Цех"))
+        ИНАЧЕ 0
+КОНЕЦ</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;СтандартныйПериод.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;СтандартныйПериод.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Цех</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Цех</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтруктурныеЕдиницы</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>СтандартныйПериод</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПустойСписок</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Пустой список</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ЗаполненностьПитчей</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Заполненность питчей</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Питч</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Цех</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Месяц</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общие показатели</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОбщийПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОбщийСуммаЗагрузки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОбщийПроцентЗагрузки</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>План</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаЗагрузки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроцентЗагрузки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РекомендуемыйРазмерПитчаНа5Дней</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗагрузкаПитча</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МаксимальнаяРазмерПитча</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТребуемыйДозагрузПитча</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТребуемыйДозагрузПлана</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПланТЗ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроцентЗагрузкиТЗ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаЗагрузкиТЗ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НДСЗагрузкиТЗ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТребуемыйДозагрузПланаТЗ</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаНачала</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>a6e6bc1d-542f-4990-a25e-264507a09dd4</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаОкончания</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>dd31555d-32fa-4cbf-b0af-54bd3c85a381</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Цех</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>7f44fdef-4499-48c7-afa2-839c969f7f92</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>СтандартныйПериод</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>ec8b9a4a-5930-4175-8efe-0ee6f079ae48</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#FFEEB7</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Цех</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Месяц</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Питч</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#FFEEB7</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Месяц</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Месяц</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общие показатели</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ОбщийПроцентЗагрузки</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ПроцентЗагрузки</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ОбщийПлан</dcsset:field>
+							</dcsset:item>
+							<dcsset:placement>Horizontally</dcsset:placement>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>План</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПроцентЗагрузки</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаЗагрузки</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>НДСЗагрузки</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>РекомендуемыйРазмерПитчаНа5Дней</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ТребуемыйДозагрузПлана</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПланТЗ</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ПроцентЗагрузкиТЗ</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаЗагрузкиТЗ</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>НДСЗагрузкиТЗ</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ТребуемыйДозагрузПланаТЗ</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Питч</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Питч</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ЗагрузкаПитча</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>НДСПитча</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>МаксимальнаяРазмерПитча</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ТребуемыйДозагрузПитча</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Цех</dcsset:field>
+							<dcsset:groupType>Hierarchy</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

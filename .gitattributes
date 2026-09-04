@@ -1,0 +1,12 @@
+﻿# Выгрузка 1С: UTF-8 с BOM + CRLF. Любая конвертация переводов строк запрещена,
+# иначе обратная загрузка внешних обработок даёт ложные различия.
+* -text
+
+# Бинарные форматы: без попыток diff/merge
+*.bin binary
+*.epf binary
+*.erf binary
+*.zip binary
+*.png binary
+*.jpg binary
+*.gif binary

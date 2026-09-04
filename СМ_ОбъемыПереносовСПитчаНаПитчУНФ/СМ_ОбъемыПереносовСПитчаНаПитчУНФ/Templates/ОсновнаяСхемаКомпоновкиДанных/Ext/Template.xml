@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цех</dataPath>
+			<field>Цех</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказПоставщику</dataPath>
+			<field>ЗаказПоставщику</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Питч</dataPath>
+			<field>Питч</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтавкаНДС</dataPath>
+			<field>СтавкаНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказПокупателя</dataPath>
+			<field>ЗаказПокупателя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ покупателя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика номенклатуры</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕдиницаИзмерения</dataPath>
+			<field>ЕдиницаИзмерения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Единица измерения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПереноса</dataPath>
+			<field>ДатаПереноса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата переноса</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПеренесеноСЦеха</dataPath>
+			<field>ПеренесеноСЦеха</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенесено с цеха</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПеренесеноСПитча</dataPath>
+			<field>ПеренесеноСПитча</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенесено с питча</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПеренесеноВПитч</dataPath>
+			<field>ПеренесеноВПитч</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенесено в питч</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПеренесеноВЦех</dataPath>
+			<field>ПеренесеноВЦех</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенесено в цех</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.ЗаказПоставщику.Договор КАК ДоговорКонтрагента,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.ЗаказПоставщику КАК ЗаказПоставщику,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.ЗаказПоставщику.ДокументОснование КАК ЗаказПокупателя,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.Номенклатура КАК Номенклатура,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.Характеристика КАК ХарактеристикаНоменклатуры,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.Номенклатура.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.СуммаНДСПриход КАК СтавкаНДС,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.Питч КАК Питч,
+	-СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.КоличествоПриход КАК КоличествоРасход,
+	-СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.СуммаВзаиморасчетовПриход КАК СуммаВзаиморасчетовРасход,
+	НАЧАЛОПЕРИОДА(СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.Период, ДЕНЬ) КАК Период
+ПОМЕСТИТЬ ТабРасход
+ИЗ
+	РегистрНакопления.СМ_ВзаиморасчетыПоЗаказамПоставщикам.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, ) КАК СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты
+ГДЕ
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.Регистратор ССЫЛКА Документ.СМ_КорректировкаЗаказаПоставщика
+	И СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.КоличествоПриход &lt; 0
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.ЗаказПоставщику.Договор КАК ДоговорКонтрагента,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.ЗаказПоставщику КАК ЗаказПоставщику,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.ЗаказПоставщику.ДокументОснование КАК ЗаказПокупателя,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.Номенклатура КАК Номенклатура,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.Характеристика КАК ХарактеристикаНоменклатуры,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.Номенклатура.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.СуммаНДСПриход КАК СтавкаНДС,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.Питч КАК Питч,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.КоличествоПриход КАК КоличествоПриход,
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.СуммаВзаиморасчетовПриход КАК СуммаВзаиморасчетовПриход,
+	НАЧАЛОПЕРИОДА(СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.Период, ДЕНЬ) КАК Период
+ПОМЕСТИТЬ ТабПриход
+ИЗ
+	РегистрНакопления.СМ_ВзаиморасчетыПоЗаказамПоставщикам.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, ) КАК СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты
+ГДЕ
+	СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.Регистратор ССЫЛКА Документ.СМ_КорректировкаЗаказаПоставщика
+	И СМ_ВзаиморасчетыПоЗаказамПоставщикамОбороты.КоличествоПриход &gt; 0
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТабРасход.ЗаказПокупателя КАК ЗаказПокупателя,
+	ТабРасход.Номенклатура КАК Номенклатура,
+	ТабРасход.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры,
+	ТабРасход.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+	ТабРасход.СтавкаНДС КАК СтавкаНДС,
+	ТабРасход.КоличествоРасход КАК КоличествоРасход,
+	ТабРасход.СуммаВзаиморасчетовРасход КАК СуммаВзаиморасчетовРасход,
+	ТабРасход.Период  КАК Период
+ПОМЕСТИТЬ ТабПереносы
+ИЗ
+	ТабРасход КАК ТабРасход
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ТабПриход КАК ТабПриход
+		ПО ТабРасход.ЗаказПокупателя = ТабПриход.ЗаказПокупателя
+			И ТабРасход.Номенклатура = ТабПриход.Номенклатура
+			И ТабРасход.ХарактеристикаНоменклатуры = ТабПриход.ХарактеристикаНоменклатуры
+			И ТабРасход.ЕдиницаИзмерения = ТабПриход.ЕдиницаИзмерения
+			И ТабРасход.СтавкаНДС = ТабПриход.СтавкаНДС
+			И ТабРасход.КоличествоРасход = ТабПриход.КоличествоПриход
+			И ТабРасход.СуммаВзаиморасчетовРасход = ТабПриход.СуммаВзаиморасчетовПриход
+			И ТабРасход.Период = ТабПриход.Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТабПереносы.ЗаказПокупателя КАК ЗаказПокупателя,
+	ТабПереносы.Номенклатура КАК Номенклатура,
+	ТабПереносы.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры,
+	ТабПереносы.ЕдиницаИзмерения КАК ЕдиницаИзмерения,
+	ТабПереносы.СтавкаНДС КАК СтавкаНДС,
+	ТабПереносы.КоличествоРасход КАК Количество,
+	ТабПереносы.СуммаВзаиморасчетовРасход КАК Сумма,
+	ТабПереносы.Период КАК ДатаПереноса,
+	ТабРасход.ЗаказПоставщику.Цех КАК ПеренесеноСЦеха,
+	ТабРасход.Питч КАК ПеренесеноСПитча,
+	ТабПриход.ЗаказПоставщику.Цех КАК ПеренесеноВЦех,
+	ТабПриход.Питч КАК ПеренесеноВПитч
+	
+ИЗ
+	ТабПереносы КАК ТабПереносы
+		ЛЕВОЕ СОЕДИНЕНИЕ ТабРасход КАК ТабРасход
+		ПО ТабПереносы.ЗаказПокупателя = ТабРасход.ЗаказПокупателя
+			И ТабПереносы.Номенклатура = ТабРасход.Номенклатура
+			И ТабПереносы.ХарактеристикаНоменклатуры = ТабРасход.ХарактеристикаНоменклатуры
+			И ТабПереносы.ЕдиницаИзмерения = ТабРасход.ЕдиницаИзмерения
+			И ТабПереносы.СтавкаНДС = ТабРасход.СтавкаНДС
+			И ТабПереносы.КоличествоРасход = ТабРасход.КоличествоРасход
+			И ТабПереносы.СуммаВзаиморасчетовРасход = ТабРасход.СуммаВзаиморасчетовРасход
+		ЛЕВОЕ СОЕДИНЕНИЕ ТабПриход КАК ТабПриход
+		ПО ТабПереносы.ЗаказПокупателя = ТабПриход.ЗаказПокупателя
+			И ТабПереносы.Номенклатура = ТабПриход.Номенклатура
+			И ТабПереносы.ХарактеристикаНоменклатуры = ТабПриход.ХарактеристикаНоменклатуры
+			И ТабПереносы.ЕдиницаИзмерения = ТабПриход.ЕдиницаИзмерения
+			И ТабПереносы.СтавкаНДС = ТабПриход.СтавкаНДС
+			И ТабПереносы.КоличествоРасход = ТабПриход.КоличествоПриход
+			И ТабПереносы.СуммаВзаиморасчетовРасход = ТабПриход.СуммаВзаиморасчетовПриход</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДатаПереноса</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ЗаказПокупателя</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ПеренесеноСЦеха</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ПеренесеноВЦех</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ПеренесеноСПитча</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>70aa976f-60f8-4c12-8dad-f1bcdd9bc031</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ДатаПереноса</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ЗаказПокупателя</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПеренесеноСЦеха</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПеренесеноВЦех</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПеренесеноСПитча</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПеренесеноВПитч</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Номенклатура</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ХарактеристикаНоменклатуры</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ЕдиницаИзмерения</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
